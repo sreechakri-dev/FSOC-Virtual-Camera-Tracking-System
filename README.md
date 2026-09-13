@@ -60,6 +60,7 @@ SIH26169/
 
 ## FSOC Tracking Telemetry
 ## Primary Telemetry Data Log
+---
 
 | Time | Motion Mode | FPS | Beacon X | Beacon Y | Tracked X | Tracked Y | Error (px) | Pan (°) | Tilt (°) | Acq Time (ms) | Status |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
