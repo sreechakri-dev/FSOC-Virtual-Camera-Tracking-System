@@ -58,7 +58,8 @@ SIH26169/
 ```
 
 ## Interface
-![Uploading Interface.png…]()
+
+<img width="1920" height="1080" alt="Interface" src="https://github.com/user-attachments/assets/f4e5e18b-8540-47d1-a08d-4aa9597d7bb3" />
 
 
 ## Telemetry Results
