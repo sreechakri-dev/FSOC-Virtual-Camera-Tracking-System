@@ -59,7 +59,8 @@ SIH26169/
 
 ## Interface
 
-<img width="1920" height="1080" alt="Interface" src="https://github.com/user-attachments/assets/f4e5e18b-8540-47d1-a08d-4aa9597d7bb3" />
+<img width="1917" height="1017" alt="Screenshot 2026-09-14 015111" src="https://github.com/user-attachments/assets/337a1276-768e-43d0-94b2-728d87bbedaf" />
+
 
 
 ## Telemetry Results
