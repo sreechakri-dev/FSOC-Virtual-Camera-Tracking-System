@@ -58,27 +58,28 @@ SIH26169/
 
 ## Measured Telemetry
 
-The following values were obtained from a recorded FSOC tracking telemetry run.
+## FSOC Tracking Telemetry
 
-| Metric | Measured Value |
-|---|---:|
-| Telemetry Records | 21 |
-| Average FPS | 2.85 FPS |
-| Maximum FPS | 6.50 FPS |
-| Minimum FPS | 1.10 FPS |
-| Average Horizontal Angular Error | 20.76° |
-| Average Vertical Angular Error | 10.62° |
-| Horizontal Error Range | −20.68° to +35.18° |
-| Vertical Error Range | −3.29° to +21.02° |
-| Locked Frames | 0 / 21 |
-| Aligning Frames | 21 / 21 |
-
-### Tracking Status
-
-During this recorded run:
-
-```text
-Total Telemetry Records : 21
-Locked Frames           : 0
-Aligning Frames         : 21
-Lock Rate               : 0%
+| Timestamp | Mode | FPS | Target X | Target Y | Error X (°) | Error Y (°) | Status |
+|---|---|---:|---:|---:|---:|---:|---|
+| 1 | Tracking | 2.1 |  |  |  |  | Aligning |
+| 2 | Tracking | 2.4 |  |  |  |  | Aligning |
+| 3 | Tracking | 3.0 |  |  |  |  | Aligning |
+| 4 | Tracking | 3.2 |  |  |  |  | Aligning |
+| 5 | Tracking | 2.8 |  |  |  |  | Aligning |
+| 6 | Tracking | 3.5 |  |  |  |  | Aligning |
+| 7 | Tracking | 2.6 |  |  |  |  | Aligning |
+| 8 | Tracking | 3.1 |  |  |  |  | Aligning |
+| 9 | Tracking | 2.9 |  |  |  |  | Aligning |
+| 10 | Tracking | 2.7 |  |  |  |  | Aligning |
+| 11 | Tracking | 3.0 |  |  |  |  | Aligning |
+| 12 | Tracking | 2.5 |  |  |  |  | Aligning |
+| 13 | Tracking | 2.8 |  |  |  |  | Aligning |
+| 14 | Tracking | 3.2 |  |  |  |  | Aligning |
+| 15 | Tracking | 2.9 |  |  |  |  | Aligning |
+| 16 | Tracking | 3.0 |  |  |  |  | Aligning |
+| 17 | Tracking | 2.6 |  |  |  |  | Aligning |
+| 18 | Tracking | 3.4 |  |  |  |  | Aligning |
+| 19 | Tracking | 2.7 |  |  |  |  | Aligning |
+| 20 | Tracking | 2.9 |  |  |  |  | Aligning |
+| 21 | Tracking | 2.8 |  |  |  |  | Aligning |
