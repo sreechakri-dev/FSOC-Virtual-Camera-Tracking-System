@@ -98,15 +98,7 @@ SIH26169/
 
 ---
 
-## Performance Metrics
 
-| Metric | Target | Measured | Status |
-|:---:|:---:|:---:|:---:|
-| Frame Rate | ≥ 30 FPS | 49.73 FPS | ✓ PASS |
-| Acquisition Time | < 20 ms | 18.76 ms | ✓ PASS |
-| Tracking Error | < 5 px | 1.35 px | ✓ PASS |
-| Pan-Tilt Accuracy | ±0.5° | ±0.02° | ✓ PASS |
-| Frame Dropout | 0% | 0% | ✓ PASS |
 
 ---
 
