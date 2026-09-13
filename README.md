@@ -55,3 +55,30 @@ SIH26169/
 ├── requirements.txt         # Project Dependencies
 ├── README.md                # Project Overview
 └── SIH26169.exe             # Compiled Standalone Executable
+
+## Measured Telemetry
+
+The following values were obtained from a recorded FSOC tracking telemetry run.
+
+| Metric | Measured Value |
+|---|---:|
+| Telemetry Records | 21 |
+| Average FPS | 2.85 FPS |
+| Maximum FPS | 6.50 FPS |
+| Minimum FPS | 1.10 FPS |
+| Average Horizontal Angular Error | 20.76° |
+| Average Vertical Angular Error | 10.62° |
+| Horizontal Error Range | −20.68° to +35.18° |
+| Vertical Error Range | −3.29° to +21.02° |
+| Locked Frames | 0 / 21 |
+| Aligning Frames | 21 / 21 |
+
+### Tracking Status
+
+During this recorded run:
+
+```text
+Total Telemetry Records : 21
+Locked Frames           : 0
+Aligning Frames         : 21
+Lock Rate               : 0%
