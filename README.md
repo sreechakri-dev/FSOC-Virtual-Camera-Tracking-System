@@ -1,62 +1,65 @@
+
 # ISRO FSOC Virtual Camera Tracking System
 
-A physics-based simulation and tracking pipeline engineered to address the pointing, latency, and environmental disturbance constraints of Free-Space Optical (FSOC) Communications.
+A professional, physics-based simulation and tracking pipeline engineered to address the pointing, latency, and environmental disturbance constraints of Free-Space Optical Communications (FSOC).
 
 ---
 
 ## Core Architecture
 
-The system decouples **perception**, **state estimation**, and **optical geometry** to maintain robust tracking lock under dynamic conditions and high-velocity scenarios.
+The system decouples **perception**, **state estimation**, and **optical geometry** to maintain a robust tracking lock under high-velocity conditions.
 
-- **Beacon Simulator (`beacon_simulator.py`)**  
-  Generates dual-mode target motion—linear translation with boundary elasticity and circular trajectories around canvas center—with parameterized velocity vectors.
+- **Inference (`detector.py`)**  
+  Executes ONNX-optimized YOLOv8 inference for high-speed target localization.
 
-- **Noise Injection (`noise_simulator.py`)**  
-  Injects multi-source environmental disturbance: Gaussian thermal noise (σ=15), Salt & Pepper dead-pixel artifacts (1%), and platform vibration jitter (±20 pixels).
+- **State Estimation (`tracker.py`)**  
+  Employs a constant-velocity kinematic estimator to bridge perception lag and execute predictive coasting during target occlusion.
 
-- **Vision Processor (`vision_processor.py`)**  
-  Executes OpenCV image moments (`cv2.moments`) for sub-pixel centroid localization, achieving robust target detection under combined noise sources.
+- **Optical Geometry (`virtual_camera.py`)**  
+  Converts pixel offsets into true angular coordinates (`θx`, `θy`) using inverse trigonometric projection.
 
-- **Pan-Tilt Controller (`pan_tilt_controller.py`)**  
-  Implements proportional control law with angular feedback, converting pixel offsets into gimbal angle corrections with 2°/frame slew rate.
+- **Disturbance Simulation (`disturbances.py`)**  
+  Injects parameterized platform vibration jitter, atmospheric scintillation noise, and motion blur.
 
-- **Performance Logger (`performance_logger.py`)**  
-  Captures 15-column telemetry stream at frame-level granularity, exporting CSV for post-mission analysis and compliance verification.
+- **Closed-Loop Control (`controller.py` & `main.py`)**  
+  Coordinates the pipeline execution loop inside a responsive CustomTkinter interface with live telemetry logging.
 
 ---
 
 ## Directory Structure
 
 ```text
-ISRO-FSOC-26169/
-├── isro_fsoc_tracking_system.py      # Integrated Simulation & Control Loop
-├── beacon_simulator.py               # Motion Generation Engine
-├── noise_simulator.py                # Environmental Disturbance Injection
-├── vision_processor.py               # Centroid Extraction Pipeline
-├── pan_tilt_controller.py            # Gimbal Control & Angle Feedback
-├── performance_logger.py             # Telemetry Capture & CSV Export
+SIH26169/
+├── src/
+│   ├── main.py              # GUI Control Terminal & Thread Manager
+│   ├── detector.py          # ONNX Runtime YOLOv8 Inference Engine
+│   ├── tracker.py           # Predictive Kinematic Estimator
+│   ├── virtual_camera.py    # Optical Geometry & Pan/Tilt Dynamics
+│   ├── controller.py        # Closed-Loop Execution Pipeline
+│   ├── disturbances.py      # Environmental Noise & Vibration Engine
+│   └── metrics.py           # Telemetry Logging & History Buffers
 │
 ├── models/
-│   └── (Pre-trained weights if ML-based extension)
+│   └── yolov8n.onnx         # Pre-trained Detection Weights
+│
+├── simulation/
+│   └── sample.mp4           # Default Target Test Video
 │
 ├── results/
-│   └── isro_fsoc_tracking_log.csv   # Runtime Telemetry Export
+│   └── sample_metrics.csv   # Exported Telemetry Logs
 │
 ├── docs/
-│   ├── ISRO_FSOC_Tracking_System_Technical_Report.docx
-│   └── FSOC_Telemetry_Performance_Report.md
+│   ├── architecture.md      # Detailed System Architecture Guide
+│   └── methodology.md       # Mathematical Formulations & Physics Derivations
 │
-├── requirements.txt                  # Python Dependencies
-├── README.md                         # Project Overview
-└── LICENSE                           # MIT License
-```
-
----
+├── requirements.txt         # Project Dependencies
+├── README.md                # Project Overview
+└── SIH26169.exe             # Compiled Standalone Executable
 
 ## Measured Telemetry
 
-## FSOC Tracking Performance Data
-
+## FSOC Tracking Telemetry
+## Primary Telemetry Data Log
 ---
 
 | Time | Motion Mode | FPS | Beacon X | Beacon Y | Tracked X | Tracked Y | Error (px) | Pan (°) | Tilt (°) | Acq Time (ms) | Status |
@@ -91,73 +94,3 @@ ISRO-FSOC-26169/
 | `00:00:10.400` | CIRCULAR | 49.6 | 407.8 | 48.9 | 408.5 | 49.7 | 1.41 | 0.01 | 0.01 | 18.94 | Tracking |
 
 ---
-
-## Performance Summary
-
-| Metric | Target | Measured | Status |
-| :---: | :---: | :---: | :---: |
-| **Mean Frame Rate** | ≥ 30 FPS | 49.73 FPS | ✓ PASS |
-| **Acquisition Time** | < 20 ms | 18.76 ms | ✓ PASS |
-| **Tracking Error** | < 5 px | 1.35 px (LINEAR), 1.39 px (CIRCULAR) | ✓ PASS |
-| **Pan/Tilt Accuracy** | ±0.5° | ±0.02° | ✓ PASS |
-| **Frame Dropout Rate** | 0% | 0/28 frames | ✓ PASS |
-| **System Status** | OPERATIONAL | NOMINAL | ✓ PASS |
-
----
-
-## Technical Specifications
-
-| Parameter | Value | Unit |
-| :---: | :---: | :---: |
-| Canvas Resolution | 640 × 480 | pixels |
-| Beacon Size | 10 × 10 | pixels |
-| Target Frame Rate | 30 | FPS |
-| Gaussian Noise (σ) | 15.0 | pixel intensity |
-| Salt & Pepper Probability | 0.5% / 0.5% | white / black |
-| Camera Jitter Range | ±20 | pixels (X, Y) |
-| Binary Threshold | 200 | pixel value |
-| Pan-Tilt Speed Limit | 2.0 | °/frame |
-| Tracking Deadzone | 5 | pixels |
-
----
-
-## Installation & Usage
-
-### Requirements
-
-```bash
-pip install -r requirements.txt
-```
-
-**requirements.txt:**
-```
-opencv-python>=4.0.0
-numpy>=1.19.0
-```
-
-### Running the System
-
-```bash
-python isro_fsoc_tracking_system.py
-```
-
-**Controls:**
-- `q` — Quit and save CSV log
-- `s` — Save and exit immediately
-
----
-
-## Documentation
-
-- **Technical Report:** `ISRO_FSOC_Tracking_System_Technical_Report.docx` (10 pages)
-- **Telemetry Analysis:** `FSOC_Telemetry_Performance_Report.md`
-- **CSV Data:** `isro_fsoc_tracking_log.csv` (28 records, 15 columns)
-
----
-
-**Smart India Hackathon Problem Statement 26169**  
-*Development of an AI-Based Virtual Camera Tracking System for Coarse Alignment of Mobile Free Space Optical Communication Terminals*
-
-**Status:** ✓ OPERATIONAL  
-**Version:** 1.0  
-**Last Updated:** September 2024
