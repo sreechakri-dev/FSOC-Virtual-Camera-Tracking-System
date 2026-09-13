@@ -57,6 +57,10 @@ SIH26169/
 └── SIH26169.exe             # Compiled Standalone Executable
 ```
 
+## Interface
+![Uploading Interface.png…]()
+
+
 ## Telemetry Results
 
 | Time | Mode | FPS | Beacon X | Beacon Y | Tracked X | Tracked Y | Error (px) | Pan (°) | Tilt (°) | Acq (ms) | Status |
