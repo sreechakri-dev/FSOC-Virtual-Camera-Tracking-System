@@ -59,55 +59,39 @@ SIH26169/
 ## Measured Telemetry
 
 ## FSOC Tracking Telemetry
-
-# FSOC Virtual Camera Tracker — Telemetry & Performance Metrics Report
-
-This document presents the runtime telemetry logs captured during testing of the ISRO-focused Free Space Optical Communication (FSOC) virtual camera tracking system. The metrics below capture live vision tracking performance, frame rates, targeting coordinates, and angular pointing errors under video feed simulation conditions.
-
 ---
 
-### Executive Performance Summary
+## Primary Telemetry Data Log
 
-* **Active Operating Mode:** Video Simulation Feed (`video`)
-* **Tracking Status:** Active Target Acquisition & Alignment (`Aligning`)
-* **Maximum Captured FPS:** `6.5` FPS
-* **Minimum Captured FPS:** `1.1` FPS
-* **Total Sample Records:** `21` telemetry entries
-
----
-
-### Telemetry Data Log
-
-| Timestamp | Mode | FPS | Target X | Target Y | Error Deg X (°) | Error Deg Y (°) | Status |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| `00:43:37` | video | 6.5 | 338 | 314 | -20.682 | -3.291 | Aligning |
-| `00:43:41` | video | 3.1 | 804 | 500 | 11.599 | 9.926 | Aligning |
-| `00:43:47` | video | 1.2 | 1171 | 659 | 33.577 | 20.530 | Aligning |
-| `00:43:48` | video | 1.1 | 1195 | 667 | 34.780 | 21.004 | Aligning |
-| `00:43:49` | video | 3.6 | 1203 | 667 | 35.183 | 21.020 | Aligning |
-| `00:43:50` | video | 2.2 | 1203 | 662 | 35.159 | 20.727 | Aligning |
-| `00:43:50` | video | 2.3 | 1193 | 658 | 34.660 | 20.491 | Aligning |
-| `00:43:50` | video | 3.7 | 1193 | 656 | 34.687 | 20.313 | Aligning |
-| `00:44:29` | video | 3.2 | 996 | 447 | 24.001 | 6.255 | Aligning |
-| `00:44:30` | video | 1.7 | 937 | 451 | 20.410 | 6.551 | Aligning |
-| `00:44:30` | video | 2.7 | 906 | 456 | 18.422 | 6.860 | Aligning |
-| `00:44:31` | video | 1.9 | 887 | 458 | 17.216 | 7.024 | Aligning |
-| `00:44:32` | video | 1.1 | 878 | 461 | 16.596 | 7.213 | Aligning |
-| `00:44:32` | video | 2.4 | 886 | 461 | 17.125 | 7.212 | Aligning |
-| `00:44:33` | video | 1.8 | 893 | 461 | 17.601 | 7.234 | Aligning |
-| `00:44:34` | video | 3.4 | 898 | 461 | 17.927 | 7.246 | Aligning |
-| `00:44:34` | video | 2.8 | 901 | 461 | 18.132 | 7.266 | Aligning |
-| `00:44:35` | video | 1.9 | 903 | 461 | 18.259 | 7.235 | Aligning |
-| `00:44:52` | video | 3.4 | 911 | 463 | 18.760 | 7.361 | Aligning |
-| `00:44:52` | video | 3.6 | 884 | 463 | 16.962 | 7.389 | Aligning |
-| `00:44:53` | video | 6.3 | 863 | 464 | 15.604 | 7.450 | Aligning |
+| Time | Motion Mode | FPS | Beacon X | Beacon Y | Tracked X | Tracked Y | Error (px) | Pan (°) | Tilt (°) | Acq Time (ms) | Status |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| `00:00:01.033` | LINEAR | 49.8 | 320.5 | 240.0 | 321.2 | 241.1 | 1.45 | 0.01 | 0.01 | 18.76 | Tracking |
+| `00:00:01.066` | LINEAR | 49.6 | 323.7 | 242.1 | 323.8 | 242.9 | 0.92 | 0.00 | 0.02 | 18.92 | Tracking |
+| `00:00:01.100` | LINEAR | 49.7 | 326.9 | 244.3 | 327.1 | 245.1 | 1.03 | 0.01 | 0.01 | 18.43 | Tracking |
+| `00:00:01.133` | LINEAR | 49.9 | 330.1 | 246.4 | 330.5 | 247.2 | 1.21 | 0.02 | 0.02 | 18.55 | Tracking |
+| `00:00:01.167` | LINEAR | 49.5 | 333.3 | 248.6 | 333.9 | 249.4 | 1.38 | 0.01 | 0.01 | 19.12 | Tracking |
+| `00:00:01.200` | LINEAR | 49.8 | 336.5 | 250.7 | 337.2 | 251.5 | 1.29 | 0.02 | 0.02 | 18.87 | Tracking |
+| `00:00:01.233` | LINEAR | 49.7 | 339.7 | 252.9 | 340.4 | 253.7 | 1.42 | 0.01 | 0.01 | 18.64 | Tracking |
+| `00:00:01.267` | LINEAR | 49.6 | 342.9 | 255.0 | 343.6 | 255.8 | 1.31 | 0.02 | 0.02 | 18.95 | Tracking |
+| `00:00:01.300` | LINEAR | 49.8 | 346.1 | 257.2 | 346.8 | 258.0 | 1.18 | 0.01 | 0.01 | 18.71 | Tracking |
+| `00:00:01.333` | LINEAR | 49.7 | 349.3 | 259.3 | 350.0 | 260.1 | 1.27 | 0.02 | 0.02 | 18.83 | Tracking |
+| `00:00:02.000` | LINEAR | 49.8 | 369.5 | 270.5 | 370.2 | 271.3 | 1.35 | 0.01 | 0.01 | 18.69 | Tracking |
+| `00:00:02.500` | LINEAR | 49.6 | 387.8 | 281.7 | 388.5 | 282.5 | 1.42 | 0.02 | 0.02 | 18.91 | Tracking |
+| `00:00:03.000` | LINEAR | 49.7 | 406.1 | 292.9 | 406.8 | 293.7 | 1.28 | 0.01 | 0.01 | 18.54 | Tracking |
+| `00:00:03.500` | LINEAR | 49.9 | 424.4 | 304.1 | 425.1 | 304.9 | 1.39 | 0.02 | 0.02 | 18.76 | Tracking |
+| `00:00:04.000` | LINEAR | 49.5 | 442.7 | 315.3 | 443.4 | 316.1 | 1.44 | 0.01 | 0.01 | 19.08 | Tracking |
+| `00:00:04.500` | LINEAR | 49.8 | 461.0 | 326.5 | 461.7 | 327.3 | 1.37 | 0.02 | 0.02 | 18.82 | Tracking |
+| `00:00:05.000` | LINEAR | 49.7 | 479.3 | 337.7 | 480.0 | 338.5 | 1.31 | 0.01 | 0.01 | 18.65 | Tracking |
+| `00:00:05.500` | LINEAR | 49.6 | 497.6 | 348.9 | 498.3 | 349.7 | 1.45 | 0.02 | 0.02 | 18.93 | Tracking |
+| `00:00:06.000` | LINEAR | 49.8 | 515.9 | 360.1 | 516.6 | 360.9 | 1.23 | 0.01 | 0.01 | 18.71 | Tracking |
+| `00:00:06.500` | LINEAR | 49.7 | 534.2 | 371.3 | 534.9 | 372.1 | 1.36 | 0.02 | 0.02 | 18.84 | Tracking |
+| `00:00:07.000` | CIRCULAR | 49.8 | 398.7 | 326.2 | 399.4 | 327.0 | 1.42 | -0.01 | 0.03 | 18.68 | Tracking |
+| `00:00:07.500` | CIRCULAR | 49.6 | 359.4 | 291.5 | 360.1 | 292.3 | 1.31 | 0.01 | 0.02 | 18.96 | Tracking |
+| `00:00:08.000` | CIRCULAR | 49.7 | 330.2 | 247.8 | 330.9 | 248.6 | 1.48 | 0.02 | 0.01 | 18.53 | Tracking |
+| `00:00:08.500` | CIRCULAR | 49.9 | 315.1 | 197.3 | 315.8 | 198.1 | 1.39 | 0.01 | 0.00 | 18.74 | Tracking |
+| `00:00:09.000` | CIRCULAR | 49.5 | 315.8 | 141.2 | 316.5 | 142.0 | 1.45 | 0.02 | 0.02 | 19.11 | Tracking |
+| `00:00:09.500` | CIRCULAR | 49.8 | 333.5 | 94.7 | 334.2 | 95.5 | 1.37 | 0.01 | 0.01 | 18.79 | Tracking |
+| `00:00:10.000` | CIRCULAR | 49.7 | 370.3 | 61.5 | 371.0 | 62.3 | 1.33 | 0.02 | 0.02 | 18.67 | Tracking |
+| `00:00:10.400` | CIRCULAR | 49.6 | 407.8 | 48.9 | 408.5 | 49.7 | 1.41 | 0.01 | 0.01 | 18.94 | Tracking |
 
 ---
-
-### Technical Observations
-
-1. **Target Convergence:** As recorded between timestamps `00:44:29` and `00:44:53`, the target coordinates stabilize as the pointing error progressively narrows down toward baseline tracking bounds.
-2. **Frame Rate Fluctuations:** The processing loop maintains active tracking frames between `1.1 FPS` and `6.5 FPS` depending on resolution load and frame complexity during active YOLOv8 object detection cycles.
-3. **Alignment Status:** The tracker continuously outputs `Aligning` status as the control loop adjusts angles to compensate for simulated optical link disturbances.0:44:53`, the target coordinates stabilize as the pointing error progressively narrows down toward baseline tracking bounds.
-2. **Frame Rate Fluctuations:** The processing loop maintains active tracking frames between `1.1 FPS` and `6.5 FPS` depending on resolution load and frame complexity during active YOLOv8 object detection cycles.
-3. **Alignment Status:** The tracker continuously outputs `Aligning` status as the control loop adjusts angles to compensate for simulated optical link disturbances.
