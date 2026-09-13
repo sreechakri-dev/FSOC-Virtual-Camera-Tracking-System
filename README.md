@@ -60,26 +60,27 @@ SIH26169/
 
 ## FSOC Tracking Telemetry
 
-| Timestamp | Mode | FPS | Target X | Target Y | Error X (°) | Error Y (°) | Status |
-|---|---|---:|---:|---:|---:|---:|---|
-| 1 | Tracking | 2.1 |  |  |  |  | Aligning |
-| 2 | Tracking | 2.4 |  |  |  |  | Aligning |
-| 3 | Tracking | 3.0 |  |  |  |  | Aligning |
-| 4 | Tracking | 3.2 |  |  |  |  | Aligning |
-| 5 | Tracking | 2.8 |  |  |  |  | Aligning |
-| 6 | Tracking | 3.5 |  |  |  |  | Aligning |
-| 7 | Tracking | 2.6 |  |  |  |  | Aligning |
-| 8 | Tracking | 3.1 |  |  |  |  | Aligning |
-| 9 | Tracking | 2.9 |  |  |  |  | Aligning |
-| 10 | Tracking | 2.7 |  |  |  |  | Aligning |
-| 11 | Tracking | 3.0 |  |  |  |  | Aligning |
-| 12 | Tracking | 2.5 |  |  |  |  | Aligning |
-| 13 | Tracking | 2.8 |  |  |  |  | Aligning |
-| 14 | Tracking | 3.2 |  |  |  |  | Aligning |
-| 15 | Tracking | 2.9 |  |  |  |  | Aligning |
-| 16 | Tracking | 3.0 |  |  |  |  | Aligning |
-| 17 | Tracking | 2.6 |  |  |  |  | Aligning |
-| 18 | Tracking | 3.4 |  |  |  |  | Aligning |
-| 19 | Tracking | 2.7 |  |  |  |  | Aligning |
-| 20 | Tracking | 2.9 |  |  |  |  | Aligning |
-| 21 | Tracking | 2.8 |  |  |  |  | Aligning |
+[fsoc_tracking_metrics.csv](https://github.com/user-attachments/files/32167613/fsoc_tracking_metrics.csv)
+Timestamp,Mode,FPS,Target_X,Target_Y,Error_Deg_X,Error_Deg_Y,Status
+00:43:37,video,6.5,338,314,-20.682,-3.291,Aligning
+00:43:41,video,3.1,804,500,11.599,9.926,Aligning
+00:43:47,video,1.2,1171,659,33.577,20.53,Aligning
+00:43:48,video,1.1,1195,667,34.78,21.004,Aligning
+00:43:49,video,3.6,1203,667,35.183,21.02,Aligning
+00:43:50,video,2.2,1203,662,35.159,20.727,Aligning
+00:43:50,video,2.3,1193,658,34.66,20.491,Aligning
+00:43:50,video,3.7,1193,656,34.687,20.313,Aligning
+00:44:29,video,3.2,996,447,24.001,6.255,Aligning
+00:44:30,video,1.7,937,451,20.41,6.551,Aligning
+00:44:30,video,2.7,906,456,18.422,6.86,Aligning
+00:44:31,video,1.9,887,458,17.216,7.024,Aligning
+00:44:32,video,1.1,878,461,16.596,7.213,Aligning
+00:44:32,video,2.4,886,461,17.125,7.212,Aligning
+00:44:33,video,1.8,893,461,17.601,7.234,Aligning
+00:44:34,video,3.4,898,461,17.927,7.246,Aligning
+00:44:34,video,2.8,901,461,18.132,7.266,Aligning
+00:44:35,video,1.9,903,461,18.259,7.235,Aligning
+00:44:52,video,3.4,911,463,18.76,7.361,Aligning
+00:44:52,video,3.6,884,463,16.962,7.389,Aligning
+00:44:53,video,6.3,863,464,15.604,7.45,Aligning
+
