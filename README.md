@@ -108,4 +108,6 @@ This document presents the runtime telemetry logs captured during testing of the
 
 1. **Target Convergence:** As recorded between timestamps `00:44:29` and `00:44:53`, the target coordinates stabilize as the pointing error progressively narrows down toward baseline tracking bounds.
 2. **Frame Rate Fluctuations:** The processing loop maintains active tracking frames between `1.1 FPS` and `6.5 FPS` depending on resolution load and frame complexity during active YOLOv8 object detection cycles.
+3. **Alignment Status:** The tracker continuously outputs `Aligning` status as the control loop adjusts angles to compensate for simulated optical link disturbances.0:44:53`, the target coordinates stabilize as the pointing error progressively narrows down toward baseline tracking bounds.
+2. **Frame Rate Fluctuations:** The processing loop maintains active tracking frames between `1.1 FPS` and `6.5 FPS` depending on resolution load and frame complexity during active YOLOv8 object detection cycles.
 3. **Alignment Status:** The tracker continuously outputs `Aligning` status as the control loop adjusts angles to compensate for simulated optical link disturbances.
