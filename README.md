@@ -114,7 +114,8 @@ SIH26169/
 | Jitter | ±20 px |
 | Threshold | 200 |
 | Pan-Tilt Speed | 2.0 °/frame |
-| Deadzone | 5 px |
+| Deadzone | 5 px | 
+
 
 ---
 
