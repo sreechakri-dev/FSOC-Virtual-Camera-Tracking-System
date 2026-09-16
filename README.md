@@ -8,7 +8,7 @@ A professional, physics-based simulation and tracking pipeline engineered to add
 ## Core Architecture
 
 The system decouples **perception**, **state estimation**, and **optical geometry** to maintain a robust tracking lock under high-velocity conditions.
-
+ 
 - **Inference (`detector.py`)**  
   Executes ONNX-optimized YOLOv8 inference for high-speed target localization.
 
