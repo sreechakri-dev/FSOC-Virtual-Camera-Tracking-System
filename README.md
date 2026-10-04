@@ -124,6 +124,8 @@ SIH26169/
 ```bash
 pip install -r requirements.txt
 
+python isro_fsoc_tracking_system.py
+
 # ------------------------------------------------------------
 # Copyright © 2026 Sree. All Rights Reserved.
 # Original Project: FSOC-Virtual-Camera-Tracking-System
@@ -131,9 +133,12 @@ pip install -r requirements.txt
 # Repository: https://github.com/sreechakri-dev/FSOC-Virtual-Camera-Tracking-System
 # See LICENSE.md for permitted use and redistribution.
 # ------------------------------------------------------------
-python isro_fsoc_tracking_system.py
+
 ```
 
 **Controls:** `q` = quit, `s` = save
 
 ---
+### Project Presentation
+
+▶️ [Watch the SIH 2026 Project Presentation on YouTube](https://youtu.be/KqF71McrFJ4)
