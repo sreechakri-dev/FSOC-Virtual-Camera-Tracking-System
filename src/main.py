@@ -407,3 +407,15 @@ class FSOCControlTerminal(ctk.CTk):
 if __name__ == "__main__":
     app = FSOCControlTerminal()
     app.mainloop()
+
+# ------------------------------------------------------------
+# Copyright © 2026 Sree. All Rights Reserved.
+# Original Project: FSOC-Virtual-Camera-Tracking-System
+# Developed for: Smart India Hackathon (SIH) 2026
+#
+# Private use and modification are permitted.
+# Redistribution, reposting, and public publication are prohibited
+# without prior written permission from Sree.
+#
+# See LICENSE.md for complete terms.
+# ------------------------------------------------------------
