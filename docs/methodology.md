@@ -50,3 +50,18 @@ To rigorously evaluate tracking resilience, the system incorporates a parameteri
 1. **Platform Vibration Jitter:** Applies a random affine warp displacement ($\pm \Delta x, \pm \Delta y$) to simulate vehicle or gimbal shaking.
 2. **Atmospheric Scintillation:** Adds zero-mean Gaussian noise ($\sigma$) across pixel intensity arrays to replicate signal scattering through turbulent air columns.
 3. **Motion Blur:** Applies a directional convolution kernel when disturbance levels exceed critical operational thresholds.
+
+
+
+---
+
+> **Copyright © 2026 Sree. All Rights Reserved.**  
+> **Original Project:** FSOC-Virtual-Camera-Tracking-System  
+> **Developed for:** Smart India Hackathon (SIH) 2026  
+>
+> Private use and modification are permitted.  
+> Redistribution, reposting, and public publication are prohibited without prior written permission from Sree.
+>
+> See [LICENSE.md](LICENSE.md) for complete terms.
+
+---
