@@ -39,3 +39,16 @@ SIH26169/
 4. **State Estimation**: The `FSOCPredictiveTracker` refines coordinates using velocity extrapolation to compensate for processing lag.
 5. **Geometry & Actuation**: The `VirtualCamera` calculates angular pointing errors ($\theta_x, \theta_y$) and updates mount angles.
 6. **Logging & Visualization**: `MetricsLogger` writes performance records to disk and updates the live UI telemetry HUD and error charts.
+
+---
+
+> **Copyright © 2026 Sree. All Rights Reserved.**  
+> **Original Project:** FSOC-Virtual-Camera-Tracking-System  
+> **Developed for:** Smart India Hackathon (SIH) 2026  
+>
+> Private use and modification are permitted.  
+> Redistribution, reposting, and public publication are prohibited without prior written permission from Sree.
+>
+> See [LICENSE.md](LICENSE.md) for complete terms.
+
+---
