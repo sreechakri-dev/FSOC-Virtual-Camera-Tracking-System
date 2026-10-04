@@ -123,6 +123,14 @@ SIH26169/
 
 ```bash
 pip install -r requirements.txt
+
+# ------------------------------------------------------------
+# Copyright © 2026 Sree. All Rights Reserved.
+# Original Project: FSOC-Virtual-Camera-Tracking-System
+# Developed for: Smart India Hackathon (SIH) 2026
+# Repository: https://github.com/sreechakri-dev/FSOC-Virtual-Camera-Tracking-System
+# See LICENSE.md for permitted use and redistribution.
+# ------------------------------------------------------------
 python isro_fsoc_tracking_system.py
 ```
 
