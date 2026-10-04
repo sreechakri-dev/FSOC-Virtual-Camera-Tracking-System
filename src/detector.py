@@ -51,3 +51,17 @@ class FSOCDetector:
                     detected_box = (x1, y1, x2, y2, obj_cx, obj_cy)
 
         return detected_box, best_dist
+
+
+
+# ------------------------------------------------------------
+# Copyright © 2026 Sree. All Rights Reserved.
+# Original Project: FSOC-Virtual-Camera-Tracking-System
+# Developed for: Smart India Hackathon (SIH) 2026
+#
+# Private use and modification are permitted.
+# Redistribution, reposting, and public publication are prohibited
+# without prior written permission from Sree.
+#
+# See LICENSE.md for complete terms.
+# ------------------------------------------------------------
